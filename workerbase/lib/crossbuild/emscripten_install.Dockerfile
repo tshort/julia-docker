@@ -85,7 +85,7 @@ ENV CC=/opt/${compiler_target}/lib/emscripten/emcc \
     PKG_CONFIG_LIBDIR=/opt/${compiler_target}/lib/emscripten/system/local/lib/pkgconfig:/opt/${compiler_target}/lib/emscripten/system/lib/pkgconfig \
     PKG_CONFIG_PATH= \
     CROSS_COMPILE=/opt/${compiler_target}/lib/emscripten/em \
-    PATH=$PATH:$EMSCRIPTEN:$LLVM_ROOT 
+    PATH=$EMSCRIPTEN:$LLVM_ROOT:$PATH 
 
 WORKDIR $EMSCRIPTEN
 RUN emcc
